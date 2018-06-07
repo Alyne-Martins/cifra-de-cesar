@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Criptografando</title>
+  </head>
+  <body style="background-color: #fffdf4">
+	 <p id="message" style="background-color:#fcfcfc; padding: 33px; margin: 100px; border: 10px ridge; text-align: center"> </p>
+	  <form style="text-align: center">
+		<input type="button" value="Criptografar" onClick='parent.location="javascript:location.reload()"'>	
+		 <input type="button" value="Descriptografar" onClick="decrypt()">	
+	 </form>
+	 <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>
+
+
+<!--
+var frase = prompt("insira somente texto");
+var chave = parseInt(prompt("insira chave numérica"));
+
+//65 - 90
+//97 -122
+
+
+function cifrando(codigo, chave){
+  var texto = "";
+  codigo =  codigo.split("");
+  for (var i = 0; i < codigo.length; i++){
+    if (codigo[i] === codigo[i].toUpperCase()){
+    texto = texto + String.fromCharCode(
+      (codigo[i].charCodeAt() - 65 + chave) % 26 + 65);
+  } else {
+    texto = texto + String.fromCharCode(
+      (codigo[i].charCodeAt() - 97 + chave) % 26 + 97);
+    }
+
+  }
+  return texto;
+}
+
+
+var mensagemCifrada = cifrando(frase, chave);
+
+function decifrando(codigo, chave){
+  var texto = "";
+  for (var i = 0; i < codigo.length; i++){
+    if (codigo[i] === codigo[i].toUpperCase()) {
+    texto = texto + String.fromCharCode(
+      (codigo[i].charCodeAt() + 65 + (26 - chave)) % 26 + 65);
+  } else {
+    texto = texto + String.fromCharCode(
+      (codigo[i].charCodeAt() + 97 - (26 - chave)) % 26 + 97);
+    }
+  }
+  return texto;
+
+}
+
+decifrando(mensagemCifrada, chave);
+
+console.log(cifrando(frase, chave));
+console.log(decifrando(mensagemCifrada, chave));
+-->
